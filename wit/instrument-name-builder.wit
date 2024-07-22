@@ -1,0 +1,5 @@
+interface builder{
+    use types.{request, error-response};
+
+    build: func(request: request)-> result<string, error-response>;
+}
