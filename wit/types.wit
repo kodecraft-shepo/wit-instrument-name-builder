@@ -1,0 +1,15 @@
+interface types{
+    use jabratech:common/types.{option-kind,instrument-kind, pair};
+
+    record request{
+        instrument-kind: instrument-kind,
+        currency-pair: pair,
+        expiry: option<string>,
+        strike: option<f64>,
+        option-kind: option<option-kind>
+    }
+
+    record error-response {
+        error: string
+    }
+}
